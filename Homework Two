@@ -1,0 +1,35 @@
+import java.util.Scanner;
+ 
+ 
+public class hw2 {
+    public static void main(String[]args){
+         int number1, number2, number3;
+            Scanner keyboard = new Scanner(System.in);  
+            System.out.println("Enter a nonnegative integer: ");
+            System.out.println("Enter a nonnegative integer: ");
+            System.out.println("Enter a nonnegative integer: ");
+            number1 = keyboard.nextInt();
+            number2 = keyboard.nextInt();
+            number3 = keyboard.nextInt();
+             
+            if (number1 < number2) {
+                if (number2 < number3) {
+                    System.out.println("123 " + number1 + number2 + number3);
+                } else {
+                    if (number1 < number3)
+                        System.out.println("132 " + number1 + number3 + number2);
+                    else
+                        System.out.println("231 " + number3 + number1 + number2);
+                }
+            } else {
+                if (number3 < number2) {
+                    System.out.println("321 " + number3 + number2 + number1);
+                } else {
+                    if (number3 < number1)
+                        System.out.println("312 " + number2 + number3 + number1);
+                    else
+                        System.out.println("213 " + number2 + number1 + number3);
+                }
+            }
+    }
+        }
