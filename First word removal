@@ -1,0 +1,26 @@
+import java.io.File;
+
+import java.util.Scanner;
+import java.io.PrintWriter;
+
+public class remover {
+
+	public static void main(String[] args) throws Exception {
+		String originalfilename = "originalfile.txt";
+		String newfilename = "newfile.txt";
+		PrintWriter out = new PrintWriter(new File(newfilename));
+		Scanner input = new Scanner(new File(originalfilename));
+		while (input.hasNextLine()) {
+			String line = input.nextLine();
+			String[] array = line.split(" ");
+			for (int i = 1; i < array.length; i++) {
+				out.write(array[i] + " ");
+			}
+
+		}
+		input.close();
+		out.close();
+
+	}
+
+}
